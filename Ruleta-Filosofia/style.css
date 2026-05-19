@@ -1,0 +1,21 @@
+/* Animación suave de aparición por desvanecimiento para las preguntas */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Deshabilitar interacciones y clics en los botones de respuestas una vez seleccionada una opción */
+.disabled-button {
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+}
